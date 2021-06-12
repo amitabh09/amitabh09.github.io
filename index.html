@@ -1,39 +1,173 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-	<style>
-		#q2{
-			display: none;
-		}
-	</style>
-</head>
-<body>
-	<h1>WELCOME </h1>
-	<div id="q1">
-		<label>Select Your Name Then Submit</label><br><br><br><br>
-			<select>
-				<option value="volv">SELECT BELOW</option>
-				<option value="volvo">AKASH</option>
-				<option value="saab">SHUBHAM</option>
-				<option value="fiat">ADASRH</option>
-				<option value="audi">ABHISHEK</option>
-			</select><br><br><br><br>
-			<button onclick="fun1()">Submit</button>
-	</div>
-	<div id="q2">
-		<h1>message is in video</h1><br>
-		<video width="320" height="440" poster="/img.jpg" controls>
-		  <source src="movie.mp4" type="video/mp4">
-		  Your browser does not support the video tag.
-		</video>
-	</div>
-	<script>
-		function fun1()
-		{
-			document.getElementById("q1").style.display="none";
-			document.getElementById("q2").style.display="block";
-		}
-	</script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      #div1{
+        border: 2px solid red;
+        height: 600px;
+        width: 600px;
+        display: none;
+      }
+      #div2{
+        border: 1px solid blue;
+        height: 400px;
+        width: 30%;
+        float: left;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+      #div3{
+        border: 1px solid green;
+        height: 400px;
+        width: 30%;
+        float: right;
+        margin-right: 10%;
+        margin-top: 10%;
+      }
+      #div4{
+        margin-top: 90%;
+        margin-left: 45%;
+      }
+      #div5{
+        border: 10px solid orange;
+        height: 400px;
+        width: 600px;
+      }
+      #you{
+        color: red;
+      }
+      #opp{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fight For Dignity </h1>
+    <div id="div1">
+      <div id="div2">
+        <h2><center>YOU</center><br><br><br></h2>
+        <h2 id="you">0</h2><br><br><br><br><br><br><br><br>
+        <progress id="xprog" value="20" max="20"></progress><h5>HEALTH</h5>
+      </div>
+      <div id="div3">
+        <h2><center>OPPONENT</center><br><br><br></h2>
+        <h2 id="opp">0</h2><br><br><br><br><br><br><br><br>
+        <progress id="yprog" value="20" max="20"></progress><h5>HEALTH</h5>
+      </div>
+      <div id="div4">
+        <button id="but1" onclick="fun1()">play</button>
+        <h3 id="result"></h3>
+      </div>
+    </div>
+    <div id="div5">
+      WELCOME BUDDY ! <BR> Select Your Player and Opponent <br><br><br>
+      <label>PLAYER</label><br>
+      <select id="selpl">
+        <option value="jc">JHON CENA</option>
+        <option value="und">UNDERTAKER</option>
+        <option value="tgk">THE GREAT KHALI</option>
+        <option value="rr">RONDA RAUSEY</option>
+        <option value="cf">CHARLOTTE</option>
+      </select><br><br><label>OPPONENET</label><BR>
+      <select id="selop">
+        <option value="und">UNDERTAKER</option>
+        <option value="jc">JHON CENA</option>
+        <option value="tgk">THE GREAT KHALI</option>
+        <option value="rr">RONDA RAUSEY</option>
+        <option value="cf">CHARLOTTE</option>
+      </select><BR><br>
+      <button onclick="fun0()">Submit</button>
+    </div>
+
+
+<script>
+  var x=0,y=0,sx=0,sy=0;
+  function fun0()
+  {
+    document.getElementById("div5").style.display='none';
+    document.getElementById("div1").style.display='block';
+    var str=document.getElementById("selop").value;
+    var strr=document.getElementById("selpl").value;
+    if (str=="und")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('und.jpg')";
+    }
+    else if (str=="jc")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('jc.jpg')";
+    }
+    else if (str=="cf")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('cf.jpg')";
+    }
+    else if (str=="rr")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('rr.jpg')";
+    }
+    else if (str=="tgk")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('tgk.jpg')";
+    }
+
+    if (strr=="und")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('und.jpg')";
+    }
+    else if (strr=="jc")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('jc.jpg')";
+    }
+    else if (strr=="cf")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('cf.jpg')";
+    }
+    else if (strr=="rr")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('rr.jpg')";
+    }
+    else if (strr=="tgk")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('tgk.jpg')";
+    }
+
+  }
+  function fun1()
+  {
+    
+    x=Math.floor(Math.random() * 10);
+    y=Math.floor(Math.random() * 10);
+    sx+=x;
+    sy+=y;
+    document.getElementById("you").innerHTML =x;
+    document.getElementById("opp").innerHTML =y;
+    document.getElementById("xprog").value=20-sy;
+    document.getElementById("yprog").value=20-sx;
+    if(sx>20 || sy>20)
+    {
+      document.getElementById("but1").style.display='none';
+      if(sx>=sy){
+        document.getElementById("result").innerHTML ="YOU ARE A WINNER";
+      }
+      else
+        document.getElementById("result").innerHTML ="YOU ARE A LOSER";
+    }
+  }
+
+</script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
