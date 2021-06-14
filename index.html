@@ -11,10 +11,11 @@
     <title>Hello, world!</title>
     <style>
       #div1{
-        border: 2px solid red;
+        border: 5px solid black;
         height: 600px;
         width: 600px;
         display: none;
+        box-shadow: 15px 15px grey;
       }
       #div2{
         border: 1px solid blue;
@@ -74,13 +75,22 @@
         <option value="jc">JHON CENA</option>
         <option value="und">UNDERTAKER</option>
         <option value="tgk">THE GREAT KHALI</option>
+        <option value="rock">THE ROCK</option>
+        <option value="stone">STONE COLD</option>
+        <option value="brock">BROCK LESNER</option>
+        <option value="torrie">TORRIE WILSON</option>
         <option value="rr">RONDA RAUSEY</option>
         <option value="cf">CHARLOTTE</option>
+
       </select><br><br><label>OPPONENET</label><BR>
       <select id="selop">
         <option value="und">UNDERTAKER</option>
         <option value="jc">JHON CENA</option>
         <option value="tgk">THE GREAT KHALI</option>
+        <option value="rock">THE ROCK</option>
+        <option value="stone">STONE COLD</option>
+        <option value="brock">BROCK LESNER</option>
+        <option value="torrie">TORRIE WILSON</option>
         <option value="rr">RONDA RAUSEY</option>
         <option value="cf">CHARLOTTE</option>
       </select><BR><br>
@@ -104,6 +114,22 @@
     {
       document.getElementById("div3").style.backgroundImage = "url('jc.jpg')";
     }
+    else if (str=="rock")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('rock.jpg')";
+    }
+    else if (str=="brock")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('brock.jpg')";
+    }
+    else if (str=="stone")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('stone.jpg')";
+    }
+    else if (str=="torrie")
+    {
+      document.getElementById("div3").style.backgroundImage = "url('torrie.png')";
+    }
     else if (str=="cf")
     {
       document.getElementById("div3").style.backgroundImage = "url('cf.jpg')";
@@ -116,6 +142,8 @@
     {
       document.getElementById("div3").style.backgroundImage = "url('tgk.jpg')";
     }
+
+
 
     if (strr=="und")
     {
@@ -136,6 +164,22 @@
     else if (strr=="tgk")
     {
       document.getElementById("div2").style.backgroundImage = "url('tgk.jpg')";
+    }
+    else if (strr=="rock")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('rock.jpg')";
+    }
+    else if (strr=="brock")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('brock.jpg')";
+    }
+    else if (strr=="stone")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('stone.jpg')";
+    }
+    else if (strr=="torrie")
+    {
+      document.getElementById("div2").style.backgroundImage = "url('torrie.png')";
     }
 
   }
